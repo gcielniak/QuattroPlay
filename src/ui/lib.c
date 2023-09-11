@@ -3,6 +3,11 @@
 #include "ui.h"
 #include "math.h"
 
+SDL_Window *window;
+SDL_Renderer *rend;
+SDL_Texture *font;
+SDL_Texture *dispbuf;
+
 color_t Colors[14] = {
  {0x00,0x00,0x00}, // Black
  {0xff,0xff,0xff}, // White

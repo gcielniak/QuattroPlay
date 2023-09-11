@@ -7,10 +7,10 @@
 
 #define set_color ui_color
 
-    SDL_Window *window;
-    SDL_Renderer *rend;
-    SDL_Texture *font;
-    SDL_Texture *dispbuf;
+extern SDL_Window *window;
+extern SDL_Renderer *rend;
+extern SDL_Texture *font;
+extern SDL_Texture *dispbuf;
 
 typedef enum {
     COLOR_BLACK = 0,

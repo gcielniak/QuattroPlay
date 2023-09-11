@@ -31,7 +31,7 @@ LDFLAGS  :=
 ifdef DEBUG
 CFLAGS   := -g -DDEBUG
 else
-CFLAGS   := -O3 -g0 -DRELEASE
+CFLAGS   := -O3 -g0 -DRELEASE -Wformat-truncation=0 -Wformat-overflow=0
 LDFLAGS  := -s
 ifdef WINDOWS
 # disable console window
@@ -102,6 +102,8 @@ OBJS = \
 	$(OBJ)/ui/scr_playlist.o \
 	$(OBJ)/ui/scr_select.o \
 	$(OBJ)/ui/ui.o \
+	$(OBJ)/legacy.o \
+	$(OBJ)/qp.o \
 	$(OBJ)/audio.o \
 	$(OBJ)/driver.o \
 	$(OBJ)/loader.o \

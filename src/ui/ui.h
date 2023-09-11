@@ -19,8 +19,8 @@
 
 #include "lib.h"
 
-    int FSIZE_X;
-    int FSIZE_Y;
+extern int FSIZE_X;
+extern int FSIZE_Y;
 
 typedef enum {
     SCR_MAIN = 0,
@@ -39,33 +39,33 @@ enum {
     R_SCR_MAIN2 = 1<<4,
 };
 
-    int gameloaded;
+extern int gameloaded;
 
-    float vol;
-    screen_t screen;
-    screen_t last_screen;
+extern float vol;
+extern screen_t screen;
+extern screen_t last_screen;
 
-    uint32_t lasttick;
-    uint32_t frame_cnt;
-    double fps_cnt;
+extern uint32_t lasttick;
+extern uint32_t frame_cnt;
+extern double fps_cnt;
 
-    int debug_stat;
-    int draw_count;
-    int rect_count;
+extern int debug_stat;
+extern int draw_count;
+extern int rect_count;
 
-    int returncode;
+extern int returncode;
 
-    int got_input;
-    SDL_Keycode keycode;
-    int running;
+extern int got_input;
+extern SDL_Keycode keycode;
+extern int running;
 
-    int refresh;
+extern int refresh;
 
-    screen_mode_t screen_mode;
-    screen_mode_t last_scrmode;
+extern screen_mode_t screen_mode;
+extern screen_mode_t last_scrmode;
 
-    char ui_notice[FCOLUMNS];
-    int ui_notice_timer;
+extern char ui_notice[FCOLUMNS];
+extern int ui_notice_timer;
 
 int ui_main(screen_mode_t);
 

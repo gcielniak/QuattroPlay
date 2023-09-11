@@ -19,7 +19,7 @@ enum {
     SCREEN_PLAYLIST,
 };
 
-struct QP_Pattern pattern;
+extern struct QP_Pattern pattern;
 
 // Draws entire screen, calls the above functions...
 void ui_info_track(int id,int ypos);
@@ -31,6 +31,6 @@ void ui_info_q_voice(int id,int ypos);
 void ui_info_s2_track(int id,int ypos);
 void ui_info_s2_voice(int id,int ypos);
 
-    int displaysection;
+extern int displaysection;
 
 #endif // SCR_MAIN_H_INCLUDED

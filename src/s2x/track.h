@@ -35,7 +35,7 @@ enum {
     S2X_CMD_JUMP86 = -12, // they use a song ID as arguments...
     S2X_CMD_EMPTY = -13, // empty row
 };
-struct S2X_TrackCommandEntry* S2X_TrackCommandTable[S2X_TYPE_MAX];
+extern struct S2X_TrackCommandEntry* S2X_TrackCommandTable[S2X_TYPE_MAX];
 //struct S2X_TrackCommandEntry S2X_S2TrackCommandTable[S2X_MAX_TRKCMD];
 //struct S2X_TrackCommandEntry S2X_S1TrackCommandTable[S2X_MAX_TRKCMD];
 //struct S2X_TrackCommandEntry S2X_NATrackCommandTable[S2X_MAX_TRKCMD];

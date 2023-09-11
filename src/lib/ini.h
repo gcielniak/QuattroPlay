@@ -24,7 +24,7 @@ typedef struct {
     int status;
 } inifile_t;
 
-const char* ini_error[INI_MAX_STATUS];
+extern const char* ini_error[INI_MAX_STATUS];
 
 int ini_open(char* filename, inifile_t* ini);
 int ini_readnext();
