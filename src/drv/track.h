@@ -27,6 +27,6 @@ typedef void (*Q_TrackCommand)(Q_State*,int,Q_Track*,uint32_t*,uint8_t);
 // callback for channel write commands
 typedef void (*Q_WriteCallback)(Q_State*,int,Q_Track*,uint32_t*,int,int,uint16_t);
 
-Q_TrackCommand Q_TrackCommandTable[0x40];
+extern Q_TrackCommand Q_TrackCommandTable[0x40];
 
 #endif // TRACK_H_INCLUDED

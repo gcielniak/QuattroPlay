@@ -17,16 +17,16 @@
 #include "loader.h"
 #include "lib/audit.h"
 
-    char QP_IniPath[128];
-    char QP_WavePath[128];
-    char QP_DataPath[128];
+extern char QP_IniPath[128];
+extern char QP_WavePath[128];
+extern char QP_DataPath[128];
 
-    char QP_DragDropPath[256];
+extern char QP_DragDropPath[256];
 
-    QP_Audio *Audio;
-    QP_Game  *Game;
-    QP_Audit *Audit;
+extern QP_Audio *Audio;
+extern QP_Game  *Game;
+extern QP_Audit *Audit;
 
-    struct QP_DriverInterface *DriverInterface;
+extern struct QP_DriverInterface *DriverInterface;
 
 #endif // QP_H_INCLUDED

@@ -3,6 +3,11 @@
 #include "ui.h"
 #include "math.h"
 
+SDL_Window *window;
+SDL_Renderer *rend;
+SDL_Texture *font;
+SDL_Texture *dispbuf;
+
 color_t Colors[14] = {
  {0x00,0x00,0x00}, // Black
  {0xff,0xff,0xff}, // White
@@ -185,6 +190,9 @@ int ui_init()
 #ifdef SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR
     SDL_SetHint(SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR, "0"); // Don't disable the compositor for X11.
 #endif
+#ifdef SDL_HINT_VIDEO_ALLOW_SCREENSAVER
+    SDL_SetHint(SDL_HINT_VIDEO_ALLOW_SCREENSAVER, "1"); // allow screensaver
+#endif
     window = SDL_CreateWindow("QuattroPlay",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,FCOLUMNS*FSIZE_X,FROWS*FSIZE_Y,SDL_WINDOW_RESIZABLE);
     rend = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
     SDL_RenderSetLogicalSize(rend,FCOLUMNS*FSIZE_X,FROWS*FSIZE_Y);
@@ -244,7 +252,7 @@ uint8_t KeyboardPatterns[25][7] = {
     {0x00,0x01,0x02,0x01,0x0F,0x00,0x03}, // D#
     {0x00,0x01,0x02,0x01,0x13,0x00,0x03}, // E
     {0x00,0x01,0x02,0x01,0x03,0x04,0x03}, // F
-    {0x00,0x01,0x02,0x01,0x03,0x08,0x03}, // F¤
+    {0x00,0x01,0x02,0x01,0x03,0x08,0x03}, // Fï¿½
     {0x00,0x01,0x02,0x01,0x03,0x0C,0x03}, // G
     {0x00,0x01,0x02,0x01,0x03,0x10,0x07}, // G#
     {0x00,0x01,0x02,0x01,0x03,0x00,0x0B}, // A

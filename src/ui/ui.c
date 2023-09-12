@@ -23,6 +23,37 @@
 
 #endif // RENDER_PROFILING
 
+int FSIZE_X;
+int FSIZE_Y;
+
+int gameloaded;
+
+float vol;
+screen_t screen;
+screen_t last_screen;
+
+uint32_t lasttick;
+uint32_t frame_cnt;
+double fps_cnt;
+
+int debug_stat;
+int draw_count;
+int rect_count;
+
+int returncode;
+
+int got_input;
+SDL_Keycode keycode;
+int running;
+
+int refresh;
+
+screen_mode_t screen_mode;
+screen_mode_t last_scrmode;
+
+char ui_notice[FCOLUMNS];
+int ui_notice_timer;
+
 void ui_drawscreen()
 {
     int i;

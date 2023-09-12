@@ -145,7 +145,7 @@ struct QP_DriverTable {
     char* name;
 };
 
-const struct QP_DriverTable DriverTable[DRIVER_COUNT];
+extern const struct QP_DriverTable DriverTable[DRIVER_COUNT];
 int DriverCreate(struct QP_DriverInterface *di,enum QP_DriverType dt);
 void DriverDestroy(struct QP_DriverInterface *di);
 

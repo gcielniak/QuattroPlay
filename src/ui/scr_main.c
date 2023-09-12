@@ -16,6 +16,9 @@
 
 #define DRV_QUATTRO (DriverInterface->Type == DRIVER_QUATTRO)
 
+struct QP_Pattern pattern;
+int displaysection;
+
     inputstate_t inpstate;
 
     static int displaymode;

@@ -23,7 +23,7 @@ static void GetSongPos(S2X_State *S,int TrackNo,S2X_Track *T)
 
     // wsg in tracks 8-15
     if(SYSTEM1)
-        T->PositionBase = (TrackNo > 7) ? S->WSGBase : S->FMBase;
+        T->PositionBase = (TrackNo > 7) ? S->PCMBase : S->FMBase;
     // only FM
     else if(SYSTEMEM)
         T->PositionBase = S->FMBase;

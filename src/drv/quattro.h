@@ -20,8 +20,8 @@
 #define Q_C352_R(_q,_v,_r) C352_read(&_q->Chip,(_v<<3)|_r)
 #define Q_C352_W(_q,_v,_r,_d) C352_write(&_q->Chip,(_v<<3)|_r,_d)
 
-const char* Q_McuNames[Q_MCUTYPE_MAX];
-const char* Q_NoteNames[12];
+extern const char* Q_McuNames[Q_MCUTYPE_MAX];
+extern const char* Q_NoteNames[12];
 
 // Initialize driver
 void Q_Init(Q_State* Q);
